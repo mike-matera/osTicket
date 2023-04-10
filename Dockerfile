@@ -9,7 +9,7 @@ COPY . /install
 WORKDIR /install
 
 RUN php manage.php deploy --setup /var/www/html \
-    && php manage.php deploy -v /var/www/htdocs/html \
+    && php manage.php deploy -v /var/www/html \
     && cp /var/www/html/include/ost-sampleconfig.php /var/www/html/include/ost-config.php \
     && chmod 0666 /var/www/html/include/ost-config.php \
     && rm -rf /install 
