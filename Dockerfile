@@ -5,7 +5,7 @@ RUN apt update -y \
         php8.1-gd php8.1-imap php8.1-mbstring php8.1-intl php8.1-apcu curl \
     && rm /var/www/html/index.html 
 
-ADD --chmod=555 https://dl.k8s.io/release/v1.26.3/bin/linux/amd64/kubectl /usr/bin/kubectl 
+ADD --chmod=0555 https://dl.k8s.io/release/v1.26.3/bin/linux/amd64/kubectl /usr/bin/kubectl 
 
 COPY . /install
 
