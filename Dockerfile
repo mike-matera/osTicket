@@ -2,7 +2,7 @@ FROM docker.io/ubuntu:22.04
 
 RUN apt update -y \
     && DEBIAN_FRONTEND=noninteractive apt install -y git apache2  php8.1 php8.1-mysql php-pear \
-        php8.1-gd php8.1-imap php8.1-mbstring php8.1-intl php8.1-apcu curl \
+        php8.1-gd php8.1-imap php8.1-mbstring php8.1-intl php8.1-apcu curl mysql-client \
     && rm /var/www/html/index.html 
 
 ADD --chmod=0555 https://dl.k8s.io/release/v1.26.3/bin/linux/amd64/kubectl /usr/bin/kubectl 
