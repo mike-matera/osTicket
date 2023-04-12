@@ -2,9 +2,6 @@
 
 set -e
 
-# TEMPORARY: 
-chmod u+x /usr/bin/kubectl
-
 # Run the installer if the server config is not valid.
 if ! kubectl get cm ${RELEASE_NAME} -o  jsonpath='{.data}'| grep -q ost-config.php
 then
